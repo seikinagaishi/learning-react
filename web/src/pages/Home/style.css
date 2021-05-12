@@ -124,16 +124,21 @@
 .card-image, .card-image img {
     width: 140px;
     height: 140px;
+    border-radius: 5px;
 }
 
 .card-image {
     background-color: #BCD3DB;
     border: 1px solid var(--primary-color);
-    border-radius: 5px;
 }
 
 .card-image img {
     object-fit: cover;
+    transition: 0.3s;
+}
+
+.card-image img:hover {
+    opacity: 80%;
 }
 
 /* Lado direito, das informações */
@@ -173,7 +178,7 @@
 /* Botão Criar */
 
 .btn-criar {
-    position: absolute;
+    position: fixed;
     bottom: 50px;
     right: 50px;
     width: 50px;
