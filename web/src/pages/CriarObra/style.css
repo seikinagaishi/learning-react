@@ -4,6 +4,10 @@
     min-height: 100vh;
 }
 
+#page-criar main {
+    position: relative;
+}
+
 form {
     background-color: var(--card-color);
     display: flex;
@@ -15,13 +19,14 @@ form {
     border-radius: 5px;
 }
 
-h1 {
+#page-criar h1 {
     width: 100%;
     text-align: center;
     font-weight: bold;
     color: var(--strong-color);
     font-size: 18pt;
     text-transform: uppercase; 
+    margin-bottom: 30px;
 }
 
 /* Divs */
@@ -63,6 +68,12 @@ label {
     height: 35px;
     padding: 0 10px;
     font-size: 14pt;
+}
+
+.form-input::-webkit-outer-spin-button,
+.form-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* Arquivo */
@@ -119,24 +130,48 @@ label {
     margin-left: 10px;
 }
 
-button {
-    background-color: var(--button-color);
-    border-radius: 5px;
-    width: 220px;
-    height: 40px;
-    border: none;
+/* Botões */
 
-    color: #fff;
-    font-size: 14pt;
-    position: absolute;
+#page-criar button, .btn-link {
+    border-radius: 5px;
     
-    right: 50px;
-    bottom: 50px;
+
+    height: 40px;
+    font-size: 14pt;
 
     cursor: pointer;
     transition: 0.2s;
 }
 
-button:hover {
+.form-button {
+    background-color: var(--button-color);
+    width: 220px;
+    color: #fff;
+
+    border: none;
+    
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+}
+
+.form-button:hover {
     background-color: var(--button-hover-color);
+}
+.btn-link {
+    background-color: blue;
+    width: 100%;
+    margin-top: 20px;
+    background-color: var(--card-color);
+    color: var(--primary-color);
+    text-decoration: none;
+
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-link:hover {
+    opacity: 70%;
 }
