@@ -1,0 +1,27 @@
+:root {
+    --background-color: #B29393;
+    --card-color: #FFF;
+    --strong-color: #306272;
+    --dropdown-color: #FFF;
+    --dropdown-hover-color: #dbdbdb;
+    --primary-color: #63838D;
+    --input-color: #BCD3DB;
+    --button-color: #159AE4;
+    --button-hover-color: #0672ac;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    min-height: 100vh;
+}

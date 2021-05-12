@@ -1,0 +1,199 @@
+#home {
+    margin-top: 80px;
+    width: 580px;
+}
+
+.card {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card + .card {
+    margin-top: 50px;
+}
+
+.card-header, .card-body {
+    background-color: var(--card-color);
+    width: 100%;
+}
+
+/* Topo */
+
+.card-header {
+    height: 60px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.card-header h1 {
+    font-weight: bold;
+    color: var(--strong-color);
+    margin: auto;
+}
+
+.card-header .options {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin: 15px 0;
+    color: var(--strong-color);
+    
+    font-weight: bold;
+    font-size: 16pt;
+
+    transform: rotate(90deg);
+    background-color: unset;
+    border: none;
+    right: 5px;
+
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 50%;
+}
+
+.dropdown-close {
+    display: none;
+}
+
+.dropdown {
+    position: absolute;
+    right: 20px;
+    margin-top: 45px;
+    z-index: 1;
+
+    list-style: none;
+    width: 150px;
+    min-height: 30px;
+    border-radius: 5px;
+    padding: 2px 0;
+
+    background-color: var(--dropdown-color);
+    border: 1px solid var(--strong-color);
+    display: block;
+}
+
+.dropdown li {
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+
+    color: var(--primary-color);
+    font-weight: lighter;
+    font-size: 15pt;
+    border-radius: 5px;
+
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.dropdown li:hover {
+    background-color: var(--dropdown-hover-color);
+}
+
+.card-header .options:hover {
+    background-color: var(--dropdown-hover-color);
+}
+
+/* Informação */
+
+.card-body {
+    height: 240px;
+    opacity: 90%;
+    display: flex;
+}
+
+.card-left, aside {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+/* Lado esquerdo, da imagem */
+
+.card-left {
+    justify-content: center;
+}
+
+.card-image, .card-image img {
+    width: 140px;
+    height: 140px;
+}
+
+.card-image {
+    background-color: #BCD3DB;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.card-image img {
+    object-fit: cover;
+}
+
+/* Lado direito, das informações */
+
+.card-info {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info, .info-group {
+    margin: 16px 0;
+}
+
+.info {
+    width: 100%;
+}
+
+.info-group {
+    width: 50%;
+}
+
+.info-title {
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 16pt;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.info-description {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+/* Botão Criar */
+
+.btn-criar {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.btn-criar:hover {
+    opacity: 80%;
+}
+
+.btn-criar img {
+    width: 24px;
+    height: 24px;
+}
