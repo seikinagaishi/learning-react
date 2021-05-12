@@ -12,7 +12,7 @@ class ObraController {
                 autor:      obra.autor,
                 ano:        obra.ano,
                 capitulos:  obra.capitulos,
-                foto_url:   `localhost:8081/uploads/${obra.foto}`,
+                foto_url:   `http://localhost:8081/uploads/${obra.foto}`,
             }
         })
 
@@ -51,7 +51,7 @@ class ObraController {
     async delete(req: Request, res: Response) {
         const {
             id
-        } = req.body
+        } = req.params;
 
         await knex('obra').del().where("id", id)
         .catch((err) => console.log(err))
