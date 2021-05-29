@@ -3,7 +3,18 @@ import knex from './../database/connection';
 
 class ObraController {
     async index(req: Request, res: Response) {
-        const obras = await knex('obra').select('*');
+        const { id } = req.query;
+
+        let obras;
+
+        if(id) {
+            obras = await knex('obra')
+            .where('id', String(id))
+            .distinct()
+            .select('*');
+        } else {
+            obras = await knex('obra').select('*');
+        }
 
         const serializedObras = obras.map(obra => {
             return {
@@ -12,7 +23,7 @@ class ObraController {
                 autor:      obra.autor,
                 ano:        obra.ano,
                 capitulos:  obra.capitulos,
-                foto_url:   `http://localhost:8081/uploads/${obra.foto}`,
+                foto_url:   `http://192.168.1.2:8081/uploads/${obra.foto}`,
             }
         })
 
